@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+* {
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+body, h1, h2, h3, h4, h5, h6 {
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 1.5px;
+}
+
+body {
+    margin: 0;
+}
+
+.contenedor {
+    margin: auto;
+    width: 98%;
+}
+
+/*----------------------------- Estilos de Header----------------------------*/
+
+.header {
+    height: 60px;
+}
+
+.header .contenedor {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    margin: 5px;
+}
+
+.icon-menu {
+    display: block;
+    font-size: 30px;
+    width: 40px;
+    height: 40px;
+    background: #FBA919;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 5px;
+    margin-left: auto;
+    cursor: pointer;
+}
+
+/*------------------------------Estilos del menu--------------------------*/
+
+.nav {
+    position: absolute;
+    top: 60px;
+    left: -100%;
+    width: 100%;
+    transition: all 0.5s;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu__link {
+    display: block;
+    padding: 20px;
+    background: #FBA919;
+    text-decoration: none;
+    color: #fff;
+}
+
+.menu__link:hover {
+    background: white;
+    color: #FBA919;
+}
+
+.mostrar{
+    left: 0;
+    transition: all 0.5s;
+}
+
+
+/*--------------------Estilos del banner---------------------*/
+
+
+.banner {
+    margin-top: -30px;
+    position: relative;
+    z-index: -1000;
+    margin-bottom: 20px;
+}
+
+.banner .contenedor {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%) translateY(50%);
+    width: 100%;
+    text-align: center;
+}
+
+.banner__titulo {
+    color:white;
+}
+
+.fondo {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+}
+
+/*Estilos de info*/
+
+.info__colum {
+    background: #FBA919;
+    color: #fff;
+    padding: 15px;
+    margin-bottom: 30px;
+}
+
+/* Estilo de Belleza */
+
+.section__titulo {
+    text-align: center;
+    font-size: 40px;
+    color: #FBA919;
+}
+
+.belleza__colum {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.belleza__descr {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5);
+    width: 60%;
+    height: 100%;
+    padding: 5px;
+}
+
+.belleza__titulo {
+    font-size: 25px;
+    margin: 5px 0;
+}
+
+/* estilos de footer */
+
+.footer {
+    background: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+.footer .social [class^="icon-"] {
+    display: inline-block;
+    color: #333;
+    background: white;
+    font-size: 30px;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    line-height: 40px;
+}
+
+/* Estilos repondive */
+
+@media(min-width:480px) {
+    .logo {
+        font-size: 40px;
+    }
+
+    .banner__titulo {
+        font-size: 30px;
+        margin: 5px 0;
+    }
+
+    .banner .contenedor{
+        top: 20%;
+    }
+
+    .info, .belleza {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .info__colum {
+        width: 32%;
+    }
+
+    .info__titulo {
+        font-size: 25px;
+        margin: 7px 0;
+    }
+
+    .belleza {
+        flex-wrap: wrap;
+        margin-top: -30px;
+    }
+
+    .section__titulo {
+        width: 100%;
+    }
+
+    .belleza__colum {
+        width: 49%;
+    }
+
+    .footer .social [class^="icon-"] {
+        margin: 0 10px;
+    }
+}
+
+@media(min-width:768px) {
+    .banner__titulo {
+        font-size: 40px;
+    }
+
+    .belleza__titulo {
+        font-size: 30px;
+    }
+}
+
+@media(min-width:1024px) {
+    .contenedor {
+        width: 1100px;
+    }
+
+    .info {
+        display: flex;
+        justify-content: space-between;
+        margin-top: -150px;
+    }
+
+    .nav {
+        position: static;
+        width: auto;
+    }
+
+    .menu {
+        display: flex;
+    }
+
+    .menu__link {
+        background: none;
+        color: #FBA919;
+    }
+
+    .icon-menu {
+        display: none;
+    }
+
+    .banner__titulo {
+        font-size: 45px;
+    }
+
+    .belleza__titulo {
+        font-size: 35px;
+    }
+
+    .belleza__descr {
+        padding: 40px;
+    }
+}
+
